@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<!--
+  * Please see the included README.md file for license terms and conditions.
+  -->
+<head>
+    <title>Blank Cordova Mobile App Project Template (Lite)</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+
+    <!-- see http://webdesign.tutsplus.com/tutorials/htmlcss-tutorials/quick-tip-dont-forget-the-viewport-meta-tag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <style>
+        @-ms-viewport { width: 100vw ; zoom: 100% ; }  @viewport { width: 100vw ; zoom: 100% ; }
+        @-ms-viewport { user-zoom: fixed ; }           @viewport { user-zoom: fixed ; }
+    </style>
+
+    <!--<script src="cordova.js"></script>
+-->
+              <!-- phantom library, needed for Cordova api calls, added during build -->
+    <script src="js/app.js"></script>           <!-- recommended location of your JavaScript code relative to other JS files -->
+    <script src="xdk/init-dev.js"></script>     <!-- normalizes device and document ready events, see README for details -->
+    <script type="text/javascript" async
+  src="js/MathJax24/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="getCSV2.js"></script>
+
+    <script type="text/javascript">
+      result = [];
+      result = getCSV();
+    </script>
+</head>
+
+<body>
+    <p id="p1">エネルギーと質量には \( E = mc^2 \) の関係がある.</p>
+    <p id="p2">---</p>
+
+<script type="text/javascript">
+function write(){
+    var elem = document.getElementById("p2");
+    elem.innerHTML = result[0][1];
+  }
+  setTimeout(write,1);//読み込みのコントロール
+</script>
+
+
+
+
+</body>
+</html>
