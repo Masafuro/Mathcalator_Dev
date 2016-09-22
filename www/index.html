@@ -1,10 +1,7 @@
 <!DOCTYPE html>
 <html>
-<!--
-  * Please see the included README.md file for license terms and conditions.
-  -->
 <head>
-    <title>Blank Cordova Mobile App Project Template (Lite)</title>
+    <title>Mathcalator</title>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
 
     <!-- see http://webdesign.tutsplus.com/tutorials/htmlcss-tutorials/quick-tip-dont-forget-the-viewport-meta-tag -->
@@ -23,39 +20,55 @@
     <script type="text/javascript" src="getCSV2.js"></script>
     <script type="text/javascript" src="functions.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script type="text/javascript">
-      result = [];
-      result = getCSV();
 
+<!-- onsen UI -->
+    <link rel="stylesheet" href="onsenui2/css/onsenui.css">
+    <link rel="stylesheet" href="onsenui2/css/onsen-css-components.css">
+    <script src="onsenui2/js/angular/angular.js"></script>
+    <script src="onsenui2/js/onsenui.js"></script>
+    <script>
+      ons.bootstrap();
+      ons.ready(function() {
+        // Add another Onsen UI element
+        var content = document.getElementById("my-content");
+        content.innerHTML="<ons-button>Another Button</ons-button>";
+        ons.compile(content);
+      });
     </script>
+
 
 </head>
 <body>
 
-    <p id="p1">エネルギーと質量には \( E = mc^2 \) の関係がある.</p>
-    <p id="p2">---</p>
-    <p id="p3">+++</p>
+<!-- mathjax ex   \( \sqrt{2} \) -->
+    <ons-navigator title="Navigator" var="myNavigator">
+      <ons-page>
+        <ons-toolbar>
+          <div class="center">数道</div>
+        </ons-toolbar>
+        <ons-scroller>
+          <ons-list>
 
 
-<script type="text/javascript">
-  var x = random(0,20);
-  var y = random(0,20);
+            <ons-list-header>ゲームリスト</ons-list-header>
 
-function qwrite(){
-  var question = result[2][2];
-  question= question.replace(/x/g,x);
-  question = question.replace(/y/g,y);
-    var elem = document.getElementById("p2");
-    elem.innerHTML = question;
-  }
-function answrite(){
-  var ans = eval(result[2][3]);
-  var elem = document.getElementById("p3");
-  elem.innerHTML = ans;
-}
-setTimeout(qwrite,100);//読み込みのコントロール
-setTimeout(answrite,100);
-</script>
+            <a href="questions.html"><ons-list-item modifier="tappable">
+              Tap Me</ons-list-item></a>
+            <ons-list-item modifier="tappable">
+              Tap Me</ons-list-item>
+            <ons-list-item modifier="tappable">
+              Tap Me</ons-list-item>
+            <ons-list-item modifier="tappable">
+              Tap Me</ons-list-item>
+            <ons-list-item modifier="tappable">
+              Tap Me</ons-list-item>
+            <ons-list-item modifier="tappable">
+              Tap Me</ons-list-item>
+          </ons-list>
+        </ons-scroller>
+      </ons-page>
+    </ons-navigator>
+
 
 </body>
 </html>
