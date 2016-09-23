@@ -5,4 +5,4 @@
 
 Dance Dance Revolution ライクな数学問題集を目指す
 
-2016-09-23：CommitをTwitterに接続テスト
+2016-09-23：CommitをTwitterに接続テスト２
