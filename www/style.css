@@ -1,3 +1,13 @@
 body {
 background-color: #ffffff;
 }
+
+@font-face {
+    font-family: "Rank";
+    src: url("font/Valentina-Regular.ttf");
+}
+
+.Rank {
+         font-family: Rank ;
+    
+}

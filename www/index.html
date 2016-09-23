@@ -19,13 +19,14 @@
   src="js/MathJax24/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="getCSV2.js"></script>
     <script type="text/javascript" src="functions.js"></script>
-    <script type="text/javascript" src="script.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
 
     <!-- appjs -->
     <link rel="stylesheet" href="js/appjs/app.min.css">
     <script type="text/javascript" src="js/appjs/app.min.js"></script>
     <script type="text/javascript" src="js/appjs/zepto.js"></script>
+    
+    
     
 </head>
 <body>
@@ -41,7 +42,7 @@
             <div id="b2">Button2</div>
         </li>
         <li class="app-button">
-            <div id="b3">---Q1---</div>
+            <div id="b3" class="Rank" >---Q1---</div>
         </li>
         
     </ul>
@@ -68,7 +69,6 @@
     }
         
     function rankup(){
-        alert("Start Rankup");
         var n = window.localStorage.getItem("num");
         n = datatoint(n);
         var R;
@@ -81,12 +81,11 @@
         else if(n==5)R="S";
         else if(n==6)R="SS";
         
-        alert("n=" + n +",R=" + R);
         window.localStorage.setItem("Rank",R);
         if(n==6)window.localStorage.removeItem("num");
         
         var b3 = document.getElementById("b3");
-        b3.innerHTML = R + "--------";
+        b3.innerHTML = R + "  --------";
 
     }
         
