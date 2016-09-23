@@ -35,6 +35,8 @@ function onAppReady() {
     }
 }
 document.addEventListener("app.Ready", onAppReady, false) ;
+
+
 // document.addEventListener("deviceready", onAppReady, false) ;
 // document.addEventListener("onload", onAppReady, false) ;
 
