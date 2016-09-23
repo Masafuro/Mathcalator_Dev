@@ -19,6 +19,7 @@
   src="js/MathJax24/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="getCSV2.js"></script>
     <script type="text/javascript" src="functions.js"></script>
+    <script type="text/javascript" src="script.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
 
 <!-- onsen UI -->
@@ -48,14 +49,19 @@
         </ons-toolbar>
         <ons-scroller>
           <ons-list>
-
+            <div id="touch">
+            <p>test</p>
+            </div>
 
             <ons-list-header>ゲームリスト</ons-list-header>
-
-            <a href="questions.html"><ons-list-item modifier="tappable">
-              Tap Me</ons-list-item></a>
+            <a href="questions.html">
             <ons-list-item modifier="tappable">
-              Tap Me</ons-list-item>
+              Tap Me</ons-list-item></a>
+
+            <div id="touchbox">
+             <ons-list-item modifier="tappable">
+              touchbox</ons-list-item>
+            </div>
             <ons-list-item modifier="tappable">
               Tap Me</ons-list-item>
             <ons-list-item modifier="tappable">
@@ -68,6 +74,16 @@
         </ons-scroller>
       </ons-page>
     </ons-navigator>
+
+    <script>
+    function touchevent(){
+      alert("touched");
+    }
+      var te = document.getElementById("touch");
+      te.addEventListener("touchend",touchevent);
+    </script>
+
+
 
 
 </body>
