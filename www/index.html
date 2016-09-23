@@ -38,7 +38,11 @@
         </li>
         
         <li class="app-button">
-            <div id="b2">Button2</div></li>
+            <div id="b2">Button2</div>
+        </li>
+        <li class="app-button">
+            <div id="b3">---Q1---</div>
+        </li>
         
     </ul>
 
@@ -61,16 +65,41 @@
         window.localStorage.clear();
         alert("Data Cleared");
         alert(window.localStorage.getItem("num"));
-        
     }
+        
+    function rankup(){
+        alert("Start Rankup");
+        var n = window.localStorage.getItem("num");
+        n = datatoint(n);
+        var R;
+        
+        if(n==0)R="E";
+        else if(n==1)R="D";
+        else if(n==2)R="C";
+        else if(n==3)R="B";
+        else if(n==4)R="A";
+        else if(n==5)R="S";
+        else if(n==6)R="SS";
+        
+        alert("n=" + n +",R=" + R);
+        window.localStorage.setItem("Rank",R);
+        if(n==6)window.localStorage.removeItem("num");
+        
+        var b3 = document.getElementById("b3");
+        b3.innerHTML = R + "--------";
+
+    }
+        
+    
       var b1 = document.getElementById("b1");
       b1.addEventListener("touchend",countup);
         
       var b2 = document.getElementById("b2");
       b2.addEventListener("touchend",countdown);
+        
+      var b3 = document.getElementById("b3");
+      b3.addEventListener("touchend",rankup);
     </script>
-
-
 
 
 </body>
