@@ -5,9 +5,18 @@ background-color: #ffffff;
 @font-face {
     font-family: "Rank";
     src: url("font/Valentina-Regular.ttf");
+    
+    font-family: "number";
+    src: url("font/18holes.ttf");
+    
 }
 
 .Rank {
          font-family: Rank ;
     
+}
+
+.number{
+        font-family: number;
+        font-size: 112px;
 }
