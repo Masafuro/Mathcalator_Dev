@@ -22,7 +22,15 @@ function load(){
   eval(result[data][i]);
   }
 
-  equation = result[data][2];
+  variable = [];
+  variable = result[data][4].split(",");
+  equation = result[data][2]
   ans = eval(result[data][3]);
+
+
+  for(i=0;i<variable.length;i++){
+      equation = equation.replace(new RegExp(variable[i],"g"),eval(variable[i]));
+  }
+
 
 }
