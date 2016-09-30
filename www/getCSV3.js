@@ -17,9 +17,9 @@ return result;
 function convertCSVtoArray(str){ // 読み込んだCSVデータが文字列として渡される
     var tmp = str.split("\n"); // 改行を区切り文字として行を要素とした配列を生成
 
-    // 各行ごとにシングルクオテーション(')で区切った文字列を要素とした二次元配列を生成
+    // 各行ごとに(;)で区切った文字列を要素とした二次元配列を生成
     for(var i=0;i<tmp.length;++i){
-        result[i] = tmp[i].split('\'');
+        result[i] = tmp[i].split('\:');
     }
   //alert(result[1][2]); // 300yen
 }

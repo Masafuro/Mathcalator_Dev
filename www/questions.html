@@ -25,11 +25,6 @@
 
 <!-- get CSV-->
     <script type="text/javascript" src="getCSV3.js"></script>
-    <script type="text/javascript">
-      result = [];
-      result = getCSV("test.csv");
-
-    </script>
 
 
 
@@ -38,11 +33,16 @@
     <script type="text/javascript" src="js/appjs/app.min.js"></script>
     <script type="text/javascript" src="js/appjs/zepto.js"></script>
 
+    <script type=text/javascript>
+    result = [];
+    result = getCSV("test5.csv");
+    </script>
+
 </head>
 <body>
 
-    <p id="p2">---</p>
-    <p id="p3">+++</p>
+    <p id="p2" class="question">---</p>
+    <p id="p3" class="question">+++</p>
     <a href="index.html"><p>Home</p></a>
 
     <table class="number">
@@ -72,32 +72,21 @@
 
 <!-- csv loading test-->
 <script type="text/javascript">
-function test(){
-var A = eval(result[2][7]);
-eval("var " + result[2][8] );
-eval("var " + result[2][9] );
-var ans = eval(result[2][3]);
-alert(ans);
-}
-
-setTimeout(test,100);
+  setTimeout(load,100);
 </script>
 
 
 <!-- load csv and put question and variable from csv -->
 <script type="text/javascript">
-  var x = random(0,20);
-  var y = random(0,20);
 
 function qwrite(){
-  var question = result[2][2];
-  question= question.replace(/x/g,x);
-  question = question.replace(/y/g,y);
+  equation = equation.replace(/x/g,x);
+  equation = equation.replace(/y/g,y);
     var elem = document.getElementById("p2");
-    elem.innerHTML = question;
+    elem.innerHTML = equation;
   }
+
 function answrite(){
-  var ans = eval(result[2][3]);
   var elem = document.getElementById("p3");
   elem.innerHTML = ans;
 }
