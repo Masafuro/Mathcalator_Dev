@@ -23,20 +23,11 @@
     <script type="text/javascript" src="functions.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
 
-<!-- get CSV-->
-    <script type="text/javascript" src="getCSV3.js"></script>
-
-
-
     <!-- appjs -->
     <link rel="stylesheet" href="js/appjs/app.min.css">
     <script type="text/javascript" src="js/appjs/app.min.js"></script>
     <script type="text/javascript" src="js/appjs/zepto.js"></script>
 
-    <script type=text/javascript>
-    result = [];
-    result = getCSV("test5.csv");
-    </script>
 
 </head>
 <body>
@@ -70,13 +61,14 @@
 
     </table>
 
-<!-- csv loading test-->
+<!-- csv load　-->
 <script type="text/javascript">
-  setTimeout(load,100);
+  result = [];
+  result = getCSV("test5.csv");
+  setTimeout(generate,100);
 </script>
 
 
-<!-- load csv and put question and variable from csv -->
 <script type="text/javascript">
 
 function qwrite(){
