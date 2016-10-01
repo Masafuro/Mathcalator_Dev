@@ -8,9 +8,9 @@
 * datatoint(n); データをintの数字にする。データがnullの時は0にする。
 * load(); データを読み込んで式の生成、各定義式の計算、変数生成、解答の生成を行う。
 配列生成、任意のcsvからのデータ取得、式の生成
-' result = [];　'
-' result = getCSV("test5.csv"); '
-' setTimeout(load,100); '
+` result = [];`
+` result = getCSV("test5.csv"); `
+` setTimeout(load,100); `
 
 
 ##CSV構造: 
