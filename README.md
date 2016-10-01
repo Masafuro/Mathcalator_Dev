@@ -6,11 +6,12 @@
 ##独自関数:functions.jsで呼び出される独自関数  
 * random(min,max)：乱数をmin~maxの間で取得
 * datatoint(n); データをintの数字にする。データがnullの時は0にする。
-* load(); データを読み込んで式の生成、各定義式の計算、変数生成、解答の生成を行う。
+* getCSV(name); データを読み込んで配列に格納。配列を返す。
+* generate(); データを読み込んで式の生成、各定義式の計算、変数生成、解答の生成を行う。
 
-配列生成` result = [];`
+配列生成。全関数で使う配列はresultで統一` result = [];`
 任意のcsvからのデータ取得` result = getCSV("test5.csv"); `
-式の生成 ` setTimeout(load,100); `
+式の生成 ` setTimeout(generate,100); `
 
 
 ##CSV構造: 
