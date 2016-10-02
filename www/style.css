@@ -19,8 +19,11 @@ background-color: #ffffff;
 .number{
         font-family: number;
         font-size: 5rem;
+        text-align: center;
 }
 
 .question{
-        font-size: 2rem
+        font-size: 2rem;
+        text-align:center;
+
 }

@@ -24,39 +24,48 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 
     <!-- appjs -->
-    <link rel="stylesheet" href="js/appjs/app.min.css">
-    <script type="text/javascript" src="js/appjs/app.min.js"></script>
-    <script type="text/javascript" src="js/appjs/zepto.js"></script>
+    <link rel="stylesheet" href="appjs/app.min.css">
+    <script type="text/javascript" src="appjs/app.min.js"></script>
+    <script type="text/javascript" src="appjs/zepto.js"></script>
 
 
 </head>
 <body>
+  <div class="app-topbar">
+      <div class="app-title">QUESTION 1</div>
 
-    <p id="p2" class="question">----</p>
-    <p id="p3" class="question">+++</p>
+  </div>
 
-    <a href="index.html"><p>Home</p></a>
+  <div class="app-content">
+    <div class="app-section">
+      <p id="p2" class="question">----</p>
+      <p id="p3" class="question">+++</p>
 
+      <div class="app-button" onclick="location.reload();">Reload</div>
+      <p class="question"><a href="index.html">Home</a></p>
+    </div>
+  </div>
     <table class="number">
         <tbody>
         <tr>
             <th>1</th>
-            <th>4</th>
-            <th>7</th>
-            <th>-</th>
-
-        </tr>
-        <tr>
             <th>2</th>
-            <th>5</th>
-            <th>8</th>
-            <th>0</th>
+            <th>3</th>
+            <th>-</th>
+            <th>C</th>
         </tr>
         <tr>
-            <th>3</th>
+            <th>4</th>
+            <th>5</th>
             <th>6</th>
+            <th>.</th>
+        </tr>
+        <tr>
+            <th>7</th>
+            <th>8</th>
             <th>9</th>
-            <th>→</th>
+            <th>0</th>
+            <th>E</th>
         </tr>
         </tbody>
 
@@ -66,7 +75,7 @@
 <script type="text/javascript">
 
   result = [];
-  result = getCSV("test7.csv");
+  result = getCSV("test8.csv");
   setTimeout(generate,100);
 
 </script>
@@ -76,13 +85,11 @@
 
 function qwrite(){
     var elem = document.getElementById("p2");
-    equation = "\\(" + equation + "\\)"
     elem.innerHTML = equation;
   }
 
 function answrite(){
   var elem = document.getElementById("p3");
-  ans = "\\(" + ans + "\\)"
   elem.innerHTML = ans;
 }
 
