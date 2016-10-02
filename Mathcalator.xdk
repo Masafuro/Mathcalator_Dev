@@ -5,7 +5,7 @@
       "projectTypeName": "com.intel.xdk.projecttype.jsapp",
       "src": "jsapp/template-blank-cordova-project-lite/sample.zip",
       "projectGuid": "e5ec0bb5-30d3-4c99-8999-a3fff5f8f37d",
-      "lastModifiedDate": 1475381641051,
+      "lastModifiedDate": 1475406501097,
       "creationDate": 1474201912522
     },
     "XDK-app-designer": "false",
@@ -117,10 +117,10 @@
         "excludedLibraries_": "",
         "cordovaCLIVersion_": "6.2.0",
         "crosswalkVersion_": "19",
-        "appVersion_": "0.0.1",
+        "appVersion_": "0.1",
         "appDescription_": "Math ",
         "appAuthor_": "RattoOffice",
-        "appVersionCode_": "4",
+        "appVersionCode_": "5",
         "signed_": true
       },
       "iOS": {
