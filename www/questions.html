@@ -32,8 +32,9 @@
 </head>
 <body>
 
-    <p id="p2" class="question">---</p>
+    <p id="p2" class="question">----</p>
     <p id="p3" class="question">+++</p>
+
     <a href="index.html"><p>Home</p></a>
 
     <table class="number">
@@ -63,9 +64,11 @@
 
 <!-- csv load　-->
 <script type="text/javascript">
+
   result = [];
-  result = getCSV("test5.csv");
+  result = getCSV("test7.csv");
   setTimeout(generate,100);
+
 </script>
 
 
@@ -73,17 +76,18 @@
 
 function qwrite(){
     var elem = document.getElementById("p2");
+    equation = "\\(" + equation + "\\)"
     elem.innerHTML = equation;
   }
 
 function answrite(){
   var elem = document.getElementById("p3");
+  ans = "\\(" + ans + "\\)"
   elem.innerHTML = ans;
 }
 
 setTimeout(qwrite,100);//読み込みのコントロール
 setTimeout(answrite,100);
-
 </script>
 
 </body>

@@ -5,7 +5,7 @@
       "projectTypeName": "com.intel.xdk.projecttype.jsapp",
       "src": "jsapp/template-blank-cordova-project-lite/sample.zip",
       "projectGuid": "e5ec0bb5-30d3-4c99-8999-a3fff5f8f37d",
-      "lastModifiedDate": 1474202903131,
+      "lastModifiedDate": 1475376883656,
       "creationDate": 1474201912522
     },
     "XDK-app-designer": "false",
@@ -85,7 +85,7 @@
         "name_": "Android",
         "preferences_": {
           "android-minSdkVersion": "14",
-          "android-targetSdkVersion": "21",
+          "android-targetSdkVersion": "14",
           "android-installLocation": "auto",
           "android-signed": true,
           "Orientation": "portrait"
@@ -120,7 +120,7 @@
         "appVersion_": "0.0.1",
         "appDescription_": "Math ",
         "appAuthor_": "RattoOffice",
-        "appVersionCode_": "1",
+        "appVersionCode_": "3",
         "signed_": true
       },
       "iOS": {
