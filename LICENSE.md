@@ -1,3 +1,7 @@
+# Mathcalator
+Copyright © 2016 Ratto-Office  
+Apache License 2.0 http://www.apache.org/licenses/LICENSE-2.0  
+
 # Intel® HTML5 Samples License Terms and Conditions
 
 Copyright © 2012-2015, Intel Corporation. All rights reserved.
