@@ -20,6 +20,7 @@
 先頭は行数を。1列目にはその行の列数を。例えば、定義式(6)まであれば、6。10以上定義式を増やしても構わない。解答式は変数で与えればよい。evalするので式でも可のはず。表示問題では\( \)で囲った部分をMathJax適応。定義式は前から読み込むので、X＝ｙ＋ｚなどの変数を含む定義式は、ｙ、ｚより後ろに記述されなければならない。データ量は大目に設定しても問題ない（10など）。
 
 ##ライセンス
+Intel XDK:BSD https://github.com/Masafuro/Mathcalator_Dev/blob/master/LICENSE.md
 MathJax:Apache License 2.0 https://github.com/mathjax/MathJax/blob/master/LICENSE
 App.js :MIT Licencse https://github.com/kikinteractive/app/blob/master/LICENSE.txt
 Otherpart 
