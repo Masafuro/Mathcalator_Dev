@@ -10,9 +10,9 @@
 * generate(); データを読み込んで式の生成、各定義式の計算、変数生成、解答の生成を行う。
 
 ##配列生成。　　
-全関数で使う配列はresultで統一` result = [];`
-任意のcsvからのデータ取得` result = getCSV("test5.csv"); `
-式の生成 ` setTimeout(generate,100); `
+全関数で使う配列はresultで統一` result = [];`　　
+任意のcsvからのデータ取得` result = getCSV("test5.csv"); `　　
+式の生成 ` setTimeout(generate,100); `　　
 
 
 ##CSV構造: 
