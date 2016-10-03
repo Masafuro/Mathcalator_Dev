@@ -45,7 +45,7 @@ function generate(){
 
   var maxData = result[data][1];
   var i;
-  for(i=maxData;i>=5;i--){
+  for(i=5;i<=maxData;i++){
   eval(result[data][i]);
   }
 
