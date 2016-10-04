@@ -71,7 +71,6 @@
             <th onTouchStart="input(5)">5</th>
             <th onTouchStart="input(6)">6</th>
             <th onTouchStart="minus()">-</th>
-
         </tr>
         <tr>
             <th onTouchStart="input(1)">1</th>
@@ -133,33 +132,33 @@ function check(){
   if (ans == myans){
     inputarea.textContent = "正解！！";
     myans = 0;
-    
+
   } else {
     inputarea.textContent = ans+" ≠ " + myans +" \n不正解...";
     myans = 0;
-    
+
   }
 
   if(num >= pnum){
     num = 0;
     setTimeout(salert,100);
-      
+
   } else {
       generate();
       qwrite();
 //    setTimeout(generate,100);
-//    setTimeout(qwrite,100);   
+//    setTimeout(qwrite,100);
   }
-    
-    
+
+
 
 }
 
 function salert(){
     swal("YOU DID IT!!");
 }
-    
-   
+
+
 function redraw(){
   inputarea.textContent = myans;
 }

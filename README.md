@@ -1,7 +1,7 @@
 数道-Mathcalator-
 ==========================================
 
-数学の問題を自動生成し、スコアなどを記録するスマホ用のプラットフォーム。Dance Dance Revolution ライクな数学問題集を目指す。開発環境は、XDK。javascript、html、cssで構成。
+数学の問題を自動生成し、スコアなどを記録するスマホ用のプラットフォーム。Dance Dance Revolution ライクな数学問題集を目指す。開発環境は、XDK。javascript、html、cssで構成。テスト中のAndroidアプリhttps://play.google.com/store/apps/details?id=mathcalator.com  
 
 ##独自関数:functions.jsで呼び出される独自関数  
 * random(min,max)：乱数をmin~maxの間で取得

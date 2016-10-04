@@ -2,32 +2,49 @@ body {
 background-color: #ffffff;
 }
 
+a {
+text-decoration: none;
+}
+
 @font-face {
-    font-family: "Rank";
-    src: url("font/Valentina-Regular.ttf");
+    font-family: "rank";
+    src: url("font/Rabelo_Regular.ttf");
+}
 
-    font-family: "number";
-    src: url("font/18holes.ttf");
+@font-face {
+  font-family: "key";
+  src: url("font/18holes.ttf");
+}
 
+@font-face {
+    font-family: "title";
+     src: url("font/ki_kokumin.ttf");
+}
+
+.title{
+        font-family: title;
+        color: #333333;
+        font-size: 1.2rem;
 }
 
 .Rank {
-         font-family: Rank ;
+         font-family: rank;
+         font-size: 2rem;
+         color: #FF0000;
 
 }
 
 .number{
+        font-family: key;
         margin-left: auto;
         margin-right: auto;
-        font-family: number;
         font-size: 4.5rem;
         text-align: center;
 }
 
 .question{
         font-size: 2rem;
-        text-align:center;
-
+        text-align: center;
 }
 
 .white{
