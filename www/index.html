@@ -42,7 +42,7 @@
     <div class="app-secttion">
       <ul class="app-list">
         <li class="app-button">
-            <div id="b1">Button1</div>
+            <div id="b0">Button1</div>
         </li>
 
         <li class="app-button">
@@ -56,11 +56,11 @@
         </li>
 
 
-        <li class="app-button" id="FAO001">
-          <a href="questions.html?file=FAO001&num=10">
+        <li class="app-button" >
+          <a id="1" href="">
             <table width="100%">
               <tr align="left">
-                <th width="30%" class="title">☆ - - - -
+                <th width="30%" class="title" id="L1">
                 </th>
                 <th width="50%" class="title">四則演算01
                 </th>
@@ -77,6 +77,35 @@
 
 
     <script>
+
+    makelink("1","FAO001.csv1",10);
+
+    function makelink(no,name,num){
+      var tg = document.getElementById(no);
+      tg.href= "questions.html?file=" + name +"&num=" + num;
+      var lv = name.slice(-1);
+      tg = document.getElementById("L" + no);
+
+      if(lv == 0){
+        tg.innerText = "- - - - -";
+      } else if (lv == 1) {
+        tg.innerText = "☆- - - -";
+      } else if (lv == 2) {
+        tg.innerText = "☆☆- - -";
+      } else if (lv == 3) {
+        tg.innerText = "☆☆☆- -";
+      } else if (lv == 4) {
+        tg.innerText = "☆☆☆☆-";
+      } else if (lv == 5) {
+        tg.innerText = "☆☆☆☆☆";
+      } else {
+        tg.innerText = "Unknown..."
+      }
+
+
+    }
+
+
     function countup(){
       var n = window.localStorage.getItem("num");
         if (n == null){
@@ -114,7 +143,7 @@
 
         var b3 = document.getElementById("b3");
         b3.innerHTML = R + "  --------";
-        
+
     }
 
 
