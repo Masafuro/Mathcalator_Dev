@@ -28,6 +28,11 @@
     <script type="text/javascript" src="appjs/app.min.js"></script>
     <script type="text/javascript" src="appjs/zepto.js"></script>
 
+    <!-- sweat alert-->
+    <link rel="stylesheet" href="sweetalert/sweetalert.css">
+    <script type="text/javascript" src="sweetalert/sweetalert.min.js"></script>
+
+
 
 </head>
 <body>
@@ -81,10 +86,12 @@
 
 <!-- csv load　-->
 <script type="text/javascript">
+
 myans = 0;
 inputarea = document.getElementById("inputarea");
 file = null;
 pnum = 0;
+num = 0;
 
 URLremover();
 
@@ -121,22 +128,38 @@ function cl(){
 }
 
 function check(){
+
+  num = num +1 ;
   if (ans == myans){
     inputarea.textContent = "正解！！";
     myans = 0;
-    setTimeout(generate,100);
-    setTimeout(qwrite,100);
-
+    
   } else {
     inputarea.textContent = ans+" ≠ " + myans +" \n不正解...";
     myans = 0;
-    setTimeout(generate,100);
-    setTimeout(qwrite,100);
-
+    
   }
+
+  if(num >= pnum){
+    num = 0;
+    setTimeout(salert,100);
+      
+  } else {
+      generate();
+      qwrite();
+//    setTimeout(generate,100);
+//    setTimeout(qwrite,100);   
+  }
+    
+    
 
 }
 
+function salert(){
+    swal("YOU DID IT!!");
+}
+    
+   
 function redraw(){
   inputarea.textContent = myans;
 }
