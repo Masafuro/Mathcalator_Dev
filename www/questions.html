@@ -88,15 +88,16 @@
 
 myans = 0;
 inputarea = document.getElementById("inputarea");
-file = null;
+file = "null";
 pnum = 0;
 num = 0;
-
+incorrect = 0;
+No = 0;
+    
 URLremover();
 
 result = [];
-filename = file;
-getCSV(filename);
+getCSV(file);
 
 setTimeout(generate,100);
 setTimeout(qwrite,200);
@@ -136,6 +137,7 @@ function check(){
   } else {
     inputarea.textContent = ans+" ≠ " + myans +" \n不正解...";
     myans = 0;
+    incorrect = incorrect + 1;
 
   }
 
@@ -146,8 +148,6 @@ function check(){
   } else {
       generate();
       qwrite();
-//    setTimeout(generate,100);
-//    setTimeout(qwrite,100);
   }
 
 
@@ -155,8 +155,33 @@ function check(){
 }
 
 function salert(){
-    swal("YOU DID IT!!");
+    var rate = incorrect / pnum * 100;
+    var rank = null;
+    
+    if (rate == 0){
+        rank = "SS"
+    } else if(rate <= 5 ){
+        rank = "S"
+    } else if (rate <= 10){
+        rank = "A"
+    } else if(rate <= 20){
+        rank = "B"
+    } else if (rate <= 30){
+        rank = "C"
+    } else if (rate <= 40){
+        rank = "D"
+    } else {
+        rank = "E"
+    }
+    
+    swal(rank);
+   window.localStorage.setItem("R_"+No , rank);
+    setTimeout(backtohome,1000);
 }
+
+function backtohome(){
+    location.href="index.html";
+}    
 
 
 function redraw(){
@@ -178,6 +203,7 @@ function URLremover(){
     }
     file = arg.file;
     pnum = datatoint(arg.num);
+    No = arg.No;
 }
 
 
