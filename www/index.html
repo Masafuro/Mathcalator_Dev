@@ -18,16 +18,14 @@
     <script src="xdk/init-dev.js"></script>     <!-- normalizes device and document ready events, see README for details -->
     <script type="text/javascript" async
   src="js/MathJax24/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/javascript" src="getCSV2.js"></script>
     <script type="text/javascript" src="functions.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
-
-
 
     <!-- appjs -->
     <link rel="stylesheet" href="appjs/app.min.css">
     <script type="text/javascript" src="appjs/app.min.js"></script>
     <script type="text/javascript" src="appjs/zepto.js"></script>
+
 
 
 
@@ -97,7 +95,7 @@
 
     <script>
 // make list
-    
+
     makelink("1","1_四則演算01.csv",10);
     makelink("2","1_四則演算02.csv",10);
     makelink("3","1_四則演算01.csv",10);
@@ -130,9 +128,9 @@
       }
 
         makerank(No,name);
-      
+
     }
-        
+
     function makerank(No){
         var R = window.localStorage.getItem("R_" + No);
 
@@ -142,12 +140,12 @@
 
       rg = document.getElementById("R" + No);
       rg.innerText = R;
-    
+
     }
 
     </script>
-    
-    
+
+
 
 
 </body>
