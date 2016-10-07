@@ -23,6 +23,9 @@
 
     <!-- appjs -->
     <link rel="stylesheet" href="appjs/app.min.css">
+    
+    <!-- test icons-->
+    <link rel="stylesheet" href="font/md/materialicons.css">
    
 </head>
 <body>
@@ -31,11 +34,14 @@
 <!-- Load app.js you have to load here not <head> -->
 
   <div class="app-topbar">
-    <a href="setting.html"><div class="app-button left">
-      <i class="material-icons md-48">menu</i>
+    <div class="app-button left">
+      <i class="material-icons">
+          <a href="setting.html">menu</a>
+        </i>
     </div>
-</a>
+
     <div class="app-title">数道 ~ Mathcalator ~</div>
+      
   
 </div>
 
@@ -92,9 +98,9 @@
     <script>
 // make list
 
-    makelink("1","1_四則演算01.csv",10);
-    makelink("2","1_四則演算02.csv",10);
-    makelink("3","1_四則演算01.csv",10);
+    makelink("1","1_sisoku01.csv",10);
+    makelink("2","1_sisoku02.csv",10);
+    makelink("3","1_sisoku01.csv",10);
 
     function makelink(No,name,num){
       var tg = document.getElementById(No);
