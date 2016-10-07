@@ -3,6 +3,7 @@ background-color: #ffffff;
 }
 
 a {
+  color: currentColor;
 text-decoration: none;
 }
 
@@ -19,6 +20,11 @@ text-decoration: none;
 @font-face {
     font-family: "title";
      src: url("font/ki_kokumin.ttf");
+}
+
+
+.app-title{
+        font-size: 3rem;
 }
 
 .title{
@@ -50,3 +56,17 @@ text-decoration: none;
 .white{
       color: white;
 }
+
+
+@font-face {
+  font-family: 'Material Icons';
+  src: url("font/md/MaterialIcons-Regular.ttf");
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-size: 24px;
+}
+
+.material-icons.red { color: rgb(255, 51, 9); }

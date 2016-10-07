@@ -23,24 +23,24 @@
 
     <!-- appjs -->
     <link rel="stylesheet" href="appjs/app.min.css">
-    <script type="text/javascript" src="appjs/app.min.js"></script>
-    <script type="text/javascript" src="appjs/zepto.js"></script>
-
-
-
-
+   
 </head>
 <body>
 
 <!-- mathjax ex   \( \sqrt{2} \) -->
-    <div class="app-topbar">
-      <div class="app-title">数道</div>
+<!-- Load app.js you have to load here not <head> -->
+
+  <div class="app-topbar">
+    <a href="setting.html"><div class="app-button left">
+      <i class="material-icons md-48">menu</i>
     </div>
+</a>
+    <div class="app-title">数道 ~ Mathcalator ~</div>
+  
+</div>
 
   <div class="app-content">
-    <div class="app-secttion">
       <ul class="app-list">
-
         <li class="app-button" >
           <a id="1" href="">
             <table width="100%">
@@ -85,11 +85,7 @@
             </table>
           </a>
         </li>
-
-
-
       </ul>
-    </div>
   </div>
 
 
@@ -144,7 +140,9 @@
     }
 
     </script>
-
+    
+     <script type="text/javascript" src="appjs/app.min.js"></script>
+    <script type="text/javascript" src="appjs/zepto.js"></script>
 
 
 
