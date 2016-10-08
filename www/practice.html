@@ -43,11 +43,11 @@
 
   <div class="app-content">
     <div class="app-section">
-      <p id="p2" class="question">---</p>
+      <p id="question" class="title">---</p>
         <table class="question">
         <tbody>
             <tr>
-                <th width="80%" id="inputarea"></th>
+                <th width="80%" id="inputarea" class="title"></th>
                 <th width="20%" onTouchStart="check()" class="number">E</th>
             </tr>
             </tbody>
@@ -187,7 +187,7 @@ function redraw(){
 }
 
 function qwrite(){
-    var elem = document.getElementById("p2");
+    var elem = document.getElementById("question");
     elem.innerHTML = equation;
      MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
   }
@@ -207,7 +207,7 @@ function URLremover(){
 
 </script>
     
-       <script type="text/javascript" src="appjs/app.min.js"></script>
+    <script type="text/javascript" src="appjs/app.min.js"></script>
     <script type="text/javascript" src="appjs/zepto.js"></script>
 
 

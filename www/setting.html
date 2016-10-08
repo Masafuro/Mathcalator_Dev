@@ -24,9 +24,9 @@
     <!-- appjs -->
     <link rel="stylesheet" href="appjs/app.min.css">
 
-      <link rel="stylesheet" href="sweetalert/sweetalert.css">
+    <link rel="stylesheet" href="sweetalert/sweetalert.css">
     <script type="text/javascript" src="sweetalert/sweetalert.min.js"></script>
-    
+
     <link rel="stylesheet" href="font/md/materialicons.css">
 
 
@@ -39,7 +39,7 @@
           <a href="index.html">refresh</a>
       </i>
     </div>
-      
+
     <div class="app-title">設定</div>
   </div>
 
@@ -54,14 +54,38 @@
 <script>
 
 function check_clear(){
-    window.localStorage.clear();
     setTimeout(msg,100);
 }
 
 function msg(){
-      swal("消去されました。");
-}    
-    
+  swal({ title: "全部消すよ?",
+        text: "データをすべて消すします。元には戻りません!",
+        type: "warning",
+        showCancelButton: true,
+        cancelButtonText: "やめとく。",
+        confirmButtonColor: "#DD6B55",
+        confirmButtonText: "消す!",
+        closeOnConfirm: false },
+        function(){
+             swal({ title: "ほんとに消すよ?",
+                text: "元には戻らないよ!",
+                type: "warning",
+                showCancelButton: true,
+                cancelButtonText: "やめとく。",
+                confirmButtonColor: "#DD6B55",
+                confirmButtonText: "消す!",
+                closeOnConfirm: false },
+            function(){
+                 window.localStorage.clear();
+                swal("消しました!",
+                "データはきれいに消えました。",
+                "success");
+            }
+          );
+        }
+    );
+}
+
 </script>
 
  <script type="text/javascript" src="appjs/app.min.js"></script>

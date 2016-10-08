@@ -27,8 +27,23 @@
     <!-- test icons-->
     <link rel="stylesheet" href="font/md/materialicons.css">
 
+    <!-- sweetalert -->
+    <link rel="stylesheet" href="sweetalert/sweetalert.css">
+    <script type="text/javascript" src="sweetalert/sweetalert.min.js"></script>
+
+    <script>
+     function loadingmsg(){
+        swal({title: "読み込み中、、、",
+              text: "ちょっと待ってね！",
+              timer: 1000,
+              showConfirmButton: false });
+
+    }
+
+    </script>
+
 </head>
-<body>
+<body onload="loadmsg()">
 
 <!-- mathjax ex   \( \sqrt{2} \) -->
 <!-- Load app.js you have to load here not <head> -->
@@ -42,7 +57,6 @@
 
     <div class="app-title">数道 ~ Mathcalator ~</div>
 
-
 </div>
 
   <div class="app-content">
@@ -53,10 +67,11 @@
 
     <script>
 // make list
-    makeselecter("1","sisoku01.csv",10,"四則演算01",1);
-    makeselecter("2","sisoku02.csv",10,"四則演算02",1);
-    makeselecter("3","sisoku02.csv",10,"四則演算03",1);
-    makeselecter("4","sisoku02.csv",10,"四則演算04",1);
+    makeselecter("1","sisoku.csv",10,"四則演算×10",1);
+    makeselecter("2","sisoku.csv",30,"四則演算×30",2);
+    makeselecter("3","sisoku.csv",50,"四則演算×50",2);
+    makeselecter("4","sisoku.csv",100,"四則演算×100",3);
+    makeselecter("5","hayasa.csv",10,"速さ×10",2);
 
 
     function makeselecter(No,fname,num,dname,lv){
@@ -80,7 +95,7 @@
     function adda(N,name,num){
       var elem = document.createElement("a");
       elem.id = "a" + N;
-      elem.href = "questions.html?file=" + name +"&num=" + num + "&No=" + N;
+      elem.href = "practice.html?file=" + name +"&num=" + num + "&No=" + N;
 
       var obj = document.getElementById("li" + N);
       obj.appendChild(elem);
@@ -127,7 +142,7 @@
       var elem3 = document.createElement("th");
       elem3.id = "tr" + "R" + N;
       elem3.width = "20%";
-      elem3.classList.add("title");
+      elem3.classList.add("Rank");
       var R = makerank(N);
       elem3.textContent = R;
 
@@ -164,6 +179,7 @@
        return R;
      }
     }
+
 
     </script>
 
