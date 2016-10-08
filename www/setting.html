@@ -54,9 +54,14 @@
 <script>
 
 function check_clear(){
-  swal("fine!");
+    window.localStorage.clear();
+    setTimeout(msg,100);
 }
 
+function msg(){
+      swal("消去されました。");
+}    
+    
 </script>
 
  <script type="text/javascript" src="appjs/app.min.js"></script>

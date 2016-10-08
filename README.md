@@ -18,7 +18,6 @@
 
 ##CSV構造:
 * : を区切り文字とする。
-* ファイル名の先頭に問題のレベルを1~5で付与する。例　"3_F01.csv"　←　レベル3の意味。  
 * 3:データ量(1):表示問題(2):解答式(3):置換変数(4):定義式(5):定義式(6):定義式(7):定義式(8):定義式(9):定義式(10)  
 先頭は行数を。1列目にはその行の列数を。例えば、定義式(6)まであれば、6。10以上定義式を増やしても構わない。解答式は変数で与えればよい。evalするので式でも可のはず。表示問題では\( \)で囲った部分をMathJax適応。定義式は前から読み込むので、X＝ｙ＋ｚなどの変数を含む定義式は、ｙ、ｚより後ろに記述されなければならない。データ量は大目に設定しても問題ない（10など）。
 
@@ -26,9 +25,10 @@
 うまくsetTimeoutなどで時間管理をしないと色々（Mathjaxやsweetalertなど）表示されない。
 
 ##ライセンス
-Intel XDK:BSD https://github.com/Masafuro/Mathcalator_Dev/blob/master/LICENSE.md  
-MathJax:Apache License 2.0 https://github.com/mathjax/MathJax/blob/master/LICENSE  
+Intel XDK: BSD https://github.com/Masafuro/Mathcalator_Dev/blob/master/LICENSE.md  
+MathJax: Apache License 2.0 https://github.com/mathjax/MathJax/blob/master/LICENSE  
 App.js :MIT Licencse https://github.com/kikinteractive/app/blob/master/LICENSE.txt  
 sweerAlert : MIT Licencse https://github.com/t4t5/sweetalert/blob/master/LICENSE
+Material Design icons: Apache License 2.0 https://github.com/google/material-design-icons/blob/master/LICENSE
 Other  
  Mathcalator:Apache License2.0 https://github.com/Masafuro/Mathcalator_Dev/blob/master/LICENSE.md  

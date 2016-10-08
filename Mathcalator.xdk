@@ -5,7 +5,7 @@
       "projectTypeName": "com.intel.xdk.projecttype.jsapp",
       "src": "jsapp/template-blank-cordova-project-lite/sample.zip",
       "projectGuid": "e5ec0bb5-30d3-4c99-8999-a3fff5f8f37d",
-      "lastModifiedDate": 1475851795201,
+      "lastModifiedDate": 1475893425440,
       "creationDate": 1474201912522
     },
     "XDK-app-designer": "false",
@@ -86,7 +86,7 @@
         "preferences_": {
           "android-minSdkVersion": "14",
           "android-targetSdkVersion": "14",
-          "android-installLocation": "auto",
+          "android-installLocation": "preferExternal",
           "android-signed": true,
           "Orientation": "portrait"
         },
@@ -111,7 +111,32 @@
           "navigation": [],
           "properties": {}
         },
-        "icons_": [],
+        "icons_": [
+          {
+            "density": "ldpi",
+            "relPath": "package-assets/android/drawable-ldpi/ic_launcher.png",
+            "width": 36,
+            "height": 36
+          },
+          {
+            "density": "mdpi",
+            "relPath": "package-assets/android/drawable-mdpi/ic_launcher.png",
+            "width": 48,
+            "height": 48
+          },
+          {
+            "density": "hdpi",
+            "relPath": "package-assets/android/drawable-hdpi/ic_launcher.png",
+            "width": 72,
+            "height": 72
+          },
+          {
+            "density": "xhdpi",
+            "relPath": "package-assets/android/drawable-xhdpi/ic_launcher.png",
+            "width": 96,
+            "height": 96
+          }
+        ],
         "splashes_": [],
         "addlPermissions_": "",
         "excludedLibraries_": "",
@@ -120,7 +145,7 @@
         "appVersion_": "0.1",
         "appDescription_": "Math ",
         "appAuthor_": "RattoOffice",
-        "appVersionCode_": "9",
+        "appVersionCode_": "10",
         "signed_": true
       },
       "iOS": {
