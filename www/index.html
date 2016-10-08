@@ -23,10 +23,10 @@
 
     <!-- appjs -->
     <link rel="stylesheet" href="appjs/app.min.css">
-    
+
     <!-- test icons-->
     <link rel="stylesheet" href="font/md/materialicons.css">
-   
+
 </head>
 <body>
 
@@ -41,56 +41,12 @@
     </div>
 
     <div class="app-title">数道 ~ Mathcalator ~</div>
-      
-  
+
+
 </div>
 
   <div class="app-content">
-      <ul class="app-list">
-        <li class="app-button" >
-          <a id="1" href="">
-            <table width="100%">
-              <tr align="left">
-                <th width="30%" class="title" id="L1">
-                </th>
-                <th width="50%" class="title" id="N1">四
-                </th>
-                <th width="20%" class="Rank" id="R1"> S
-                </th>
-              </tr>
-            </table>
-          </a>
-        </li>
-
-        <li class="app-button" >
-          <a id="2" href="">
-            <table width="100%">
-              <tr align="left">
-                <th width="30%" class="title" id="L2">
-                </th>
-                <th width="50%" class="title" id="N2">四
-                </th>
-                <th width="20%" class="Rank" id="R2"> S
-                </th>
-              </tr>
-            </table>
-          </a>
-        </li>
-
-        <li class="app-button" >
-          <a id="3" href="">
-            <table width="100%">
-              <tr align="left">
-                <th width="30%" class="title" id="L3">
-                </th>
-                <th width="50%" class="title" id="N3">四
-                </th>
-                <th width="20%" class="Rank" id="R3"> S
-                </th>
-              </tr>
-            </table>
-          </a>
-        </li>
+      <ul class="app-list" id="list">
       </ul>
   </div>
 
@@ -98,55 +54,122 @@
     <script>
 // make list
 
-    makelink("1","1_sisoku01.csv",10);
-    makelink("2","1_sisoku02.csv",10);
-    makelink("3","1_sisoku01.csv",10);
+    makeselecter("1","1_sisoku01.csv",10,"四則演算01",1);
+    makeselecter("2","1_sisoku01.csv",10,"四則演算02",1);
+    makeselecter("3","1_sisoku01.csv",10,"四則演算03",1);
+    makeselecter("4","1_sisoku01.csv",10,"四則演算04",1);
 
-    function makelink(No,name,num){
-      var tg = document.getElementById(No);
-      tg.href= "questions.html?file=" + name +"&num=" + num + "&No=" + No;
 
-      var title = document.getElementById("N" + No);
-      var namearray = name.split("_");
-      var lv = namearray[0];
-      namearray = namearray[1].split(".");
-      title.innerText = namearray[0];
 
-      tg = document.getElementById("L" + No);
-      if(lv == 0){
-        tg.innerText = "- - - - -";
-      } else if (lv == 1) {
-        tg.innerText = "☆- - - -";
-      } else if (lv == 2) {
-        tg.innerText = "☆☆- - -";
-      } else if (lv == 3) {
-        tg.innerText = "☆☆☆- -";
-      } else if (lv == 4) {
-        tg.innerText = "☆☆☆☆-";
-      } else if (lv == 5) {
-        tg.innerText = "☆☆☆☆☆";
-      } else {
-        tg.innerText = "Unknown..."
-      }
 
-        makerank(No,name);
+    function makeselecter(No,fname,num,dname,lv){
+      addli(No);
+      adda(No,fname,num);
+      addtable(No);
+      addtr(No);
+      addth(No,lv,dname);
+    }
+
+    function addli(N){
+      var elem = document.createElement("li");
+      elem.classList.add("app-button");
+      elem.id = "li" + N;
+
+      var obj = document.getElementById("list");
+      obj.appendChild(elem);
 
     }
+
+    function adda(N,name,num){
+      var elem = document.createElement("a");
+      elem.id = "a" + N;
+      elem.href = "questions.html?file=" + name +"&num=" + num + "&No=" + N;
+
+      var obj = document.getElementById("li" + N);
+      obj.appendChild(elem);
+    }
+
+    function addtable(N){
+      var elem = document.createElement("table");
+      elem.id = "table" + N;
+      elem.width = "100%";
+
+      var obj = document.getElementById("a" + N);
+      obj.appendChild(elem);
+    }
+
+    function addtr(N){
+      var elem = document.createElement("tr");
+      elem.id = "tr" + N;
+      elem.align = "left";
+
+      var obj = document.getElementById("table" + N);
+      obj.appendChild(elem);
+    }
+
+    function addth(N,lv,name){
+      var elem1 = document.createElement("th");
+      elem1.id = "tr" + "L" + N;
+      elem1.width = "30%";
+      elem1.classList.add("title");
+      lv = makelv(lv);
+      elem1.textContent = lv;
+
+      var obj = document.getElementById("tr" + N);
+      obj.appendChild(elem1);
+
+      var elem2 = document.createElement("th");
+      elem2.id = "tr" + "N" + N;
+      elem2.width = "50%";
+      elem2.classList.add("title");
+      elem2.textContent = name;
+
+      var obj = document.getElementById("tr" + N);
+      obj.appendChild(elem2);
+
+      var elem3 = document.createElement("th");
+      elem3.id = "tr" + "R" + N;
+      elem3.width = "20%";
+      elem3.classList.add("title");
+      var R = makerank(N);
+      elem3.textContent = R;
+
+      var obj = document.getElementById("tr" + N);
+      obj.appendChild(elem3);
+
+    }
+
+    function makelv(lv){
+      if(lv == 0){
+        return "- - - - -";
+      } else if (lv == 1) {
+        return "☆- - - -";
+      } else if (lv == 2) {
+        return "☆☆- - -";
+      } else if (lv == 3) {
+        return "☆☆☆- -";
+      } else if (lv == 4) {
+        return "☆☆☆☆-";
+      } else if (lv == 5) {
+        return "☆☆☆☆☆";
+      } else {
+        return "Unknown..."
+      }
+    }
+
 
     function makerank(No){
         var R = window.localStorage.getItem("R_" + No);
 
       if(R == null){
-        R = "---";
-      }
-
-      rg = document.getElementById("R" + No);
-      rg.innerText = R;
-
+       return "---";
+     } else {
+       return R;
+     }
     }
 
     </script>
-    
+
      <script type="text/javascript" src="appjs/app.min.js"></script>
     <script type="text/javascript" src="appjs/zepto.js"></script>
 
