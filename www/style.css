@@ -22,6 +22,11 @@ text-decoration: none;
     src: url("font/ki_kokumin.ttf");
 }
 
+@font-face {
+    font-family: "kokugo";
+    src: url("font/ki_kokugo.ttf");
+}
+
 
 
 
@@ -50,11 +55,27 @@ text-decoration: none;
         text-align: center;
 }
 
+.answer{
+  font-family: title;
+  color: #333333;
+  font-size: 2.3rem;
 
+}
+
+.answerbutton{
+        font-family: key;
+        font-size: 3rem;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+}
 
 .question{
-        font-size: 2rem;
-        text-align: center;
+        font-family: kokugo;
+        font-size: 1.5rem;
+        text-align: left;
+        margin-left: auto;
+        margin-right: auto;
 }
 
 .white{

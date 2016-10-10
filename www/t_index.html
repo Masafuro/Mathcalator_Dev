@@ -33,8 +33,8 @@
 
     <script>
      function loadmsg(){
-        swal({title: "Practice Mode!",
-              text: "",
+        swal({title: "TimeAttack Mode!",
+              text: "---",
               timer: 1000,
               showConfirmButton: false });
     }
@@ -56,7 +56,7 @@
     <div class="app-title">数道 ~ Mathcalator ~</div>
     <div class="right app-button">
       <i class="material-icons">
-        <a href="t_index.html">timer</a>
+        <a href="index.html">&#xE167;</a>
       </i>
     </div>
 
@@ -97,7 +97,7 @@
     function adda(N,name,num){
       var elem = document.createElement("a");
       elem.id = "a" + N;
-      elem.href = "practice.html?file=" + name +"&num=" + num + "&No=" + N;
+      elem.href = "timeattack.html?file=" + name +"&num=" + num + "&No=" + N;
 
       var obj = document.getElementById("li" + N);
       obj.appendChild(elem);
@@ -144,14 +144,15 @@
       var elem3 = document.createElement("th");
       elem3.id = "tr" + "R" + N;
       elem3.width = "20%";
-      elem3.classList.add("Rank");
-      var R = makerank(N);
-      elem3.textContent = R;
+      elem3.classList.add("Time");
+      var T = maketime(N);
+      elem3.textContent = T;
 
       var obj = document.getElementById("tr" + N);
       obj.appendChild(elem3);
 
     }
+        
 
     function makelv(lv){
       if(lv == 0){
@@ -172,14 +173,21 @@
     }
 
 
-    function makerank(No){
-        var R = window.localStorage.getItem("R_" + No);
-
-      if(R == null){
-       return "---";
+    function maketime(No){
+        var t = window.localStorage.getItem("T_" + No);
+        t = datatoint(t);
+        var ret;
+        
+      if(t == 0){
+       ret = "---";
      } else {
-       return R;
+        var ms = new Date(t);
+        var min = ms.getMinutes();
+        var sec = ms.getSeconds();
+        var mils = ms.getMilliseconds();
+        ret =  min + ":" + sec + "." + mils;  
      }
+        return ret;
     }
 
 

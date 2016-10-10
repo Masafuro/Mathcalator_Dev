@@ -29,22 +29,22 @@
     <!-- sweat alert-->
     <link rel="stylesheet" href="sweetalert/sweetalert.css">
     <script type="text/javascript" src="sweetalert/sweetalert.min.js"></script>
-    
+
     <!-- material icons -->
     <link rel="stylesheet" href="font/md/materialicons.css">
 
 </head>
-<body>      
+<body>
 <div class="app-topbar">
     <div class="app-button left">
       <i class="material-icons">
-          <a href="index.html">refresh</a>
+          <a href="t_index.html">refresh</a>
       </i>
     </div>
 
-    <div class="app-title">設定</div>
+    <div class="app-title">TimeAttack</div>
   </div>
-    
+
     <div class="app-title" id="title"></div>
   </div>
 
@@ -63,7 +63,7 @@
             </tr>
             </tbody>
         </table>
-      
+
         <table class="number">
         <tbody>
         <tr>
@@ -99,15 +99,28 @@ pnum = 0;
 num = 0;
 incorrect = 0;
 No = 0;
+starttime = 0;
+endtime = 0;
+totaltime = 0;
 
 URLremover();
 
 result = [];
 getCSV(file);
 
+setTimeout(start,100);
 setTimeout(generate,100);
 setTimeout(qwrite,200);
 
+
+function start(){
+    swal({
+        title:"START!!",
+        timer: 1000,
+        showConfirmButton: false
+  });
+  starttime = new Date();
+}
 
 function input(n){
   if (myans >= 0){
@@ -155,38 +168,24 @@ function check(){
       generate();
       qwrite();
   }
-
-
-
 }
 
+
 function salert(){
-    var rate = incorrect / pnum * 100;
-    var rank = null;
+  endtime = new Date();
+  totaltime = endtime - starttime;
+  setTimeout(timealert,100);
 
-    if (rate == 0){
-        rank = "SS"
-    } else if(rate <= 5 ){
-        rank = "S"
-    } else if (rate <= 10){
-        rank = "A"
-    } else if(rate <= 20){
-        rank = "B"
-    } else if (rate <= 30){
-        rank = "C"
-    } else if (rate <= 40){
-        rank = "D"
-    } else {
-        rank = "E"
-    }
-
-    swal(rank);
-   window.localStorage.setItem("R_"+No , rank);
+   window.localStorage.setItem("T_"+No, totaltime);
     setTimeout(backtohome,1000);
+}
+    
+function timealert(){
+  swal(totaltime + "ms");
 }
 
 function backtohome(){
-    location.href="index.html";
+    location.href="t_index.html";
 }
 
 
